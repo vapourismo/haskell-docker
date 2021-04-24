@@ -11,7 +11,8 @@ RUN cabal update && \
         --constraint='lukko -ofd-locking' \
         --install-method=copy \
         --installdir=/opt/cabal-new/bin \
-        --overwrite-policy=always && \
+        --overwrite-policy=always \
+        --jobs && \
     rm -rf /opt/cabal/* && \
     mv /opt/cabal-new/* /opt/cabal && \
     rm -rf ~/.cabal
