@@ -12,7 +12,8 @@ RUN cabal update && \
         --install-method=copy \
         --installdir=/opt/cabal-new/bin \
         --overwrite-policy=always && \
-    mv /opt/cabal-new/ /opt/cabal/ && \
+    rm -rf /opt/cabal/* && \
+    mv /opt/cabal-new/* /opt/cabal && \
     rm -rf ~/.cabal
 
 # Make new cabal-install available
