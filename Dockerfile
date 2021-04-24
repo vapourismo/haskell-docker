@@ -15,7 +15,7 @@ RUN cabal update && \
         --jobs && \
     rm -rf /opt/cabal/* && \
     mv /opt/cabal-new/* /opt/cabal && \
-    rm -rf ~/.cabal
+    rm -rf ~/.cabal /opt/cabal-new
 
 # Make new cabal-install available
 ENV PATH=/opt/cabal/bin:$PATH
